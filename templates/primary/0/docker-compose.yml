@@ -49,4 +49,4 @@ grafana:
        - graf-db
     links:
       - prometheus:prometheus
-      - rancher-api-integration.exporters:rancher-api-integration
+      - exporters/rancher-api-integration:rancher-api-integration
