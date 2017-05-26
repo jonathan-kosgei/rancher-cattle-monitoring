@@ -48,5 +48,5 @@ grafana:
     volumes_from:
        - graf-db
     links:
-      - prometheus.exporters:prometheus
+      - prometheus:prometheus
       - rancher-api-integration.exporters:rancher-api-integration
