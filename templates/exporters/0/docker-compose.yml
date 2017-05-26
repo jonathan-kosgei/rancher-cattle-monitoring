@@ -20,11 +20,11 @@ node-exporter:
   stdin_open: true
   net: "host"
 
-  rancher-api-integration:
-    tty: true
-    labels:
-      io.rancher.container.create_agent: true
-      io.rancher.container.agent.role: environment
-    expose:
-      - 9010:9010
-    image: rucknar/prometheus-rancher-exporter:01
+rancher-api-integration:
+  tty: true
+  labels:
+    io.rancher.container.create_agent: true
+    io.rancher.container.agent.role: environment
+  expose:
+    - 9010:9010
+  image: rucknar/prometheus-rancher-exporter:01
