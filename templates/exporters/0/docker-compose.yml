@@ -24,7 +24,7 @@ rancher-api-integration:
   tty: true
   labels:
     io.rancher.container.create_agent: true
-    io.rancher.container.agent.role: environment
+    io.rancher.container.agent.role: environmentAdmin
   expose:
     - 9010:9010
   image: rucknar/prometheus-rancher-exporter:01
