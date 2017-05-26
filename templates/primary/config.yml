@@ -1,8 +1,8 @@
-name: Primary Monitoring
+name: Monitoring Primary
 description: |
-   Primary Monitoring
-version: 1
+  Monitoring Primary
+version: 1.0.0
 category: Monitoring
 maintainer: Jonathan Kosgei
 license: MIT
-projectURL: https://github.com/jonathan-kosgei/rancher-cattle-monitoring@primary
+projectURL: https://github.com/jonathan-kosgei/rancher-cattle-monitoring
