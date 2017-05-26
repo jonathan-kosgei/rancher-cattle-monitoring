@@ -14,10 +14,10 @@ prometheus:
       io.rancher.sidekicks: prom-conf
     volumes_from:
        - prom-conf
-    links:
-      - ranch-eye:ranch-eye
-      - node-exporter:node-exporter
-      - rancher-api-integration:rancher-api-integration
+    external_links:
+      - exporters/ranch-eye:ranch-eye
+      - exporters/node-exporter:node-exporter
+      - exporters/rancher-api-integration:rancher-api-integration
 
 influxdb:
   image: tutum/influxdb:0.10
