@@ -1,0 +1,43 @@
+.catalog:
+  name: # Name of the versioned template of the Catalog Entry
+  version: # Version of the versioned template of the Catalog Entry
+  description: # Description of the versioned template of the Catalog Entry
+  uuid: # Unique identifier to be used for upgrades. Please see note.
+  minimum_rancher_version: # The minimum version of Rancher that supports the template
+  questions: #Used to request user input for configuration options
+
+prometheus:
+  upgrade_strategy:
+    start_first: true
+  scale: 1
+  health_check:
+    port: 9090
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000
+
+influxdb:
+  upgrade_strategy:
+    start_first: true
+  scale: 1
+  health_check:
+    port: 8086
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000
+
+grafana:
+  upgrade_strategy:
+    start_first: true
+  scale: 1
+  health_check:
+    port: 3000
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000
