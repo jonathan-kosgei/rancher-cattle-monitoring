@@ -15,9 +15,9 @@ prometheus:
     volumes_from:
        - prom-conf
     links:
-      - ranch-eye.exporters:ranch-eye
-      - node-exporter.exporters:node-exporter
-      - rancher-api-integration.exporters:rancher-api-integration
+      - ranch-eye:ranch-eye
+      - node-exporter:node-exporter
+      - rancher-api-integration:rancher-api-integration
 
 influxdb:
   image: tutum/influxdb:0.10
