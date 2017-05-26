@@ -17,7 +17,7 @@ prometheus:
       - prom-conf
     volumes:
       - /data/
-    links:
+    external_links:
     - exporters/cadvisor:cadvisor
     - exporters/node-exporter:node-exporter
     - exporters/prometheus-rancher-exporter:prometheus-rancher-exporter
@@ -41,7 +41,7 @@ grafana:
       io.rancher.sidekicks: graf-db
     volumes_from:
        - graf-db
-    links:
+    external_links:
       - prometheus:prometheus
       - exporters/prometheus-rancher-exporter:prometheus-rancher-exporter
 
