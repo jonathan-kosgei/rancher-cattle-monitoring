@@ -18,9 +18,9 @@ prometheus:
     volumes:
       - /data/
     links:
-    - cadvisor:cadvisor
-    - node-exporter:node-exporter
-    - prometheus-rancher-exporter:prometheus-rancher-exporter
+    - exporters/cadvisor:cadvisor
+    - exporters/node-exporter:node-exporter
+    - exporters/prometheus-rancher-exporter:prometheus-rancher-exporter
     extra_hosts:
     - "rancher-server:${RANCHER_SERVER}"
 
@@ -43,5 +43,5 @@ grafana:
        - graf-db
     links:
       - prometheus:prometheus
-      - prometheus-rancher-exporter:prometheus-rancher-exporter
+      - exporters/prometheus-rancher-exporter:prometheus-rancher-exporter
 
