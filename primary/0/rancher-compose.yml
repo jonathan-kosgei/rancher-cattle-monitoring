@@ -6,20 +6,36 @@
   minimum_rancher_version: # The minimum version of Rancher that supports the template
   questions: #Used to request user input for configuration options
 
-ranch-eye:
-  upgrade_strategy:
-    start_first: true
-
-node-exporter:
-  upgrade_strategy:
-    start_first: true
-
-rancher-api-integration:
+prometheus:
   upgrade_strategy:
     start_first: true
   scale: 1
   health_check:
-    port: 9010
+    port: 9090
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000
+
+influxdb:
+  upgrade_strategy:
+    start_first: true
+  scale: 1
+  health_check:
+    port: 8086
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000
+
+grafana:
+  upgrade_strategy:
+    start_first: true
+  scale: 1
+  health_check:
+    port: 3000
     interval: 5000
     unhealthy_threshold: 3
     request_line: ''
